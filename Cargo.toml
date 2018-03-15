@@ -5,3 +5,11 @@ authors = ["Omer Ben-Amram <omerbenamram@gmail.com>"]
 build = "build.rs"
 
 [dependencies]
+
+[features]
+# Use this feature when building an extension module.
+# It tells the linker to keep the python symbols unresolved,
+# so that the module can also be used with statically linked python interpreters.
+extension-module = [ ]
+
+# Bind to any python 3.x.
