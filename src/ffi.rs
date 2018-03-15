@@ -13,4 +13,8 @@ extern "C" {
     pub fn PyRun_SimpleStringFlags(arg1: *const c_char,
                                    arg2: *mut PyCompilerFlags)
                                    -> c_int;
+    pub fn rpython_startup_code() -> ();
+    pub fn pypy_setup_home(arg1: c_int, arg2: c_int) -> c_int;
+    pub fn pypy_execute_source(arg1: *const c_char) -> c_int;
+
 }
